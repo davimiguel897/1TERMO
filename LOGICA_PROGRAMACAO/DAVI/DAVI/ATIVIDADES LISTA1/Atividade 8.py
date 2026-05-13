@@ -1,0 +1,1 @@
+print("Eu tenho 25 anos, em 10 anos, eu terei", 25 + 10, "anos.")
