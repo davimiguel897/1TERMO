@@ -34,18 +34,15 @@ janela = tk.Tk()
 janela.title("Minha Primeira Janela em GUI")
 janela.geometry("400x400")
 janela.configure(bg="#aaecee")
-# 2. Criar a função para o botão
 def mostrar_mensagem():
     messagebox.showinfo("Sucesso", "Você clicou no botão! :) ")
-# 3. Criar os componentes (widgets)
 lbl_titulo_pagina = tk.Label(janela, text="Bem-vindo a aula de Interface Gráfica em Python!", font=("Arial", 14, "bold"))
 btn_clique_ativar = tk.Button(janela, text="Clique aqui :)", font=("Arial", 14), bg="#a0baf3", fg="white", command=mostrar_mensagem)
 btn_clicar_fechar = tk.Button(janela, text="Fechar aplicativo", command=janela.destroy)
 lbl_titulo_pagina.grid(row=0, column=0, padx=10, pady=10)
 btn_clique_ativar.grid(row=1, column=1, padx=15, pady=15)
 btn_clicar_fechar.grid(row=2, column=1, padx=10, pady=10)
-# 4. Posicionar os widgets na janela
-# 5. Rodar interface gráfica
+
 janela.mainloop()
 
 # Como colocar uma imagem no background da janela?
