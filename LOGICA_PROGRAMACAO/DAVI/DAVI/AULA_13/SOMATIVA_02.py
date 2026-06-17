@@ -376,3 +376,63 @@
 # button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy)
 # button_fechar.pack(pady=10)
 # janela.mainloop()
+
+
+# 15: Relatório de Turno Completo
+
+# import tkinter as tk
+# from tkinter import messagebox
+
+# TOTAL_PECAS = 5
+# pecas_aprovadas = 0
+# pecas_rejeitadas = 0
+# peca_atual = 1
+
+
+# def verificar_peca():
+#     global pecas_aprovadas, pecas_rejeitadas, peca_atual
+
+#     try:
+#         diametro = float(entry_diametro.get())
+#     except ValueError:
+#         messagebox.showerror("Erro", "Digite um valor numérico válido para o diâmetro.")
+#         return
+
+#     if 19.9 <= diametro <= 20.1:
+#         pecas_aprovadas += 1
+#         messagebox.showinfo("Peça Aprovada", f"Peça {peca_atual} aprovada! Diâmetro: {diametro} mm")
+#     else:
+#         pecas_rejeitadas += 1
+#         messagebox.showwarning("Peça Reprovada", f"Peça {peca_atual} reprovada! Diâmetro: {diametro} mm")
+
+#     peca_atual += 1
+#     entry_diametro.delete(0, tk.END)
+
+#     if peca_atual > TOTAL_PECAS:
+#         eficiencia = (pecas_aprovadas / TOTAL_PECAS) * 100
+#         messagebox.showinfo(
+#             "Relatório de Turno",
+#             f"Total de peças aprovadas: {pecas_aprovadas}\n"
+#             f"Peças rejeitadas: {pecas_rejeitadas}\n"
+#             f"Eficiência do lote: {eficiencia:.2f}%"
+#         )
+#         button_verificar.config(state=tk.DISABLED)
+#         label_status.config(text="Relatório finalizado.")
+#     else:
+#         label_status.config(text=f"Digitando peça {peca_atual} de {TOTAL_PECAS}")
+
+
+# janela = tk.Tk()
+# janela.title("Relatório de Turno Completo")
+# janela.geometry("320x220")
+# label_diametro = tk.Label(janela, text="Digite o diâmetro da peça em mm:")
+# label_diametro.pack(pady=5)
+# entry_diametro = tk.Entry(janela)
+# entry_diametro.pack(pady=5)
+# button_verificar = tk.Button(janela, text="Verificar Peça", command=verificar_peca)
+# button_verificar.pack(pady=10)
+# label_status = tk.Label(janela, text=f"Digitando peça {peca_atual} de {TOTAL_PECAS}")
+# label_status.pack(pady=5)
+# button_fechar = tk.Button(janela, text="Fechar", command=janela.destroy)
+# button_fechar.pack(pady=10)
+# janela.mainloop()
